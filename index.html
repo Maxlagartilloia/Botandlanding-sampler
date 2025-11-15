@@ -559,52 +559,33 @@
                 <p class="plan-discount">*Ideal para empresas que quieren verse serias, ordenadas y confiables.</p>
             </div>
 
-  <!-- SECCIÓN DE TESTIMONIOS -->
-  <section id="testimonials" class="section">
-    <h2 class="section-title reveal">Lo que opinan nuestros clientes</h2>
-    <div class="testimonial-grid">
-        <!-- Testimonio 1 -->
-        <div class="testimonial-card reveal" data-delay="100">
-            <div class="testimonial-header">
-                <img src="https://picsum.photos/seed/face1/100" alt="Avatar de Maria Arévalo" class="testimonial-avatar">
-                <h3>«Muchas gracias«</h3>
-            </div>
-            <p>Gracias por responder rápido y brindarme soluciones a todo lo que les pedí. Tienen una gran calidad humana, eso es algo que valoro enormemente.</p>
-            <div class="testimonial-footer">
-                <div class="testimonial-stars">★★★★★</div>
-                <div class="testimonial-author">Maria Arévalo</div>
-                <div class="testimonial-company">Empresa: Confecta</div>
-            </div>
-        </div>
-        <!-- Testimonio 2 -->
-        <div class="testimonial-card reveal" data-delay="200">
-            <div class="testimonial-header">
-                <img src="https://picsum.photos/seed/face2/100" alt="Avatar de Laura Cardenas" class="testimonial-avatar">
-                <h3>¡Recomendado 100%!</h3>
-            </div>
-            <p>¡Estoy encantada con su trabajo! La página web que hicieron para mi negocio quedó muy bonita. Gracias por tomar en cuenta mis ideas y hacerlas funcionar. Son unos profesionales. ¡Recomiendo sus servicios al 100%!</p>
-            <div class="testimonial-footer">
-                <div class="testimonial-stars">★★★★★</div>
-                <div class="testimonial-author">Laura Cardenas</div>
-                <div class="testimonial-company">Empresa: BodasEncanto</div>
-            </div>
-        </div>
-        <!-- Testimonio 3 -->
-        <div class="testimonial-card reveal" data-delay="300">
-            <div class="testimonial-header">
-                <img src="https://picsum.photos/seed/face3/100" alt="Avatar de Javier Hidalgo P." class="testimonial-avatar">
-                <h3>«Faltó unos detalles»</h3>
-            </div>
-            <p>La manera en la que trabajan me parece genial, aunque tuve que hacer cambios después del lanzamiento considero que quedó excelente.</p>
-            <div class="testimonial-footer">
-                <div class="testimonial-stars">★★★★☆</div>
-                <div class="testimonial-author">Javier Hidalgo P.</div>
-                <div class="testimonial-company">Empresa: ArquiVision</div>
-            </div>
-        </div>
-    </div>
-  </section>
+ /* NUEVA VERSIÓN CENTRADA Y SOLO 2 TESTIMONIOS */
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* SOLO 2 TESTIMONIOS */
+    gap: 35px;
+    max-width: 900px;       /* CENTRADO PERFECTO */
+    margin: 0 auto;         /* CENTRADO */
+    padding: 0 20px;        /* SE VE BONITO EN TABLET */
+}
 
+/* EN CELULAR -> 1 COLUMNA (ELEGANTE Y CLARO) */
+@media (max-width: 768px) {
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+}
+
+/* OPCIONAL: ESTILIZA MEJOR LAS CARDS */
+.testimonial-card {
+    background: var(--card);
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
 
   <!-- CARRUSEL DE LOGOS DE CLIENTES -->
   <section class="client-logos reveal fade">
