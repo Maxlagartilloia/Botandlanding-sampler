@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>https://i.postimg.cc/59QpJsBB/IMG-0314-removebg-preview.png | Páginas de Ventas y Agentes de IA</title>
+  <title>Criss Lombeida | Páginas de Ventas y Agentes de IA</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://i.postimg.cc/59QpJsBB/IMG-0314-removebg-preview.png">
+
   <!-- Enlaces a fuentes y estilos externos -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -41,13 +45,27 @@
         z-index: 1000;
         background: rgba(30, 47, 30, 0.5);
         backdrop-filter: blur(10px);
-        padding: 8px 16px; border-radius: 999px;
-        font-weight: 600; font-size: 1.1rem;
-        text-decoration: none; color: var(--ink);
+        padding: 6px 14px;
+        border-radius: 999px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 600; 
+        font-size: 1rem;
+        text-decoration: none; 
+        color: var(--ink);
         transition: transform 0.3s ease;
     }
+    .logo img{
+        height: 32px;
+        width: auto;
+        display: block;
+    }
+    .logo span.brand {
+        font-weight: 800;
+        color: var(--cta1);
+    }
     .logo:hover { transform: scale(1.05); }
-    .logo span { font-weight: 800; color: var(--cta1); }
 
     .contact-fab {
         position: fixed; bottom: 25px; right: 25px;
@@ -200,7 +218,12 @@
     .cards{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:24px; }
     .card{ background:var(--card); border-radius:14px; overflow:hidden; text-align:left; transition:transform .25s ease, box-shadow .25s ease; }
     .card:hover{ transform:translateY(-6px); box-shadow:0 18px 36px rgba(0,0,0,.35); }
-    .card img{width:100%;height:180px;object-fit:cover}
+    .card img{
+      width:100%;
+      height:230px;
+      object-fit:cover;
+      display:block;
+    }
     .card .content{padding:18px}
     .tag{ display:inline-block; font-size:.78rem; color:#111; background:#cfffe8; border-radius:999px; padding:6px 10px; margin-bottom:8px; }
     
@@ -218,7 +241,7 @@
     .plan-subtitle { font-size: 0.9rem; color: var(--muted); margin-bottom: 20px; }
     .plan-price { font-size: 2.8rem; font-weight: 800; color: var(--ink); margin-bottom: 5px; }
     .plan-price span { font-size: 1rem; font-weight: 400; color: var(--muted); }
-    .plan-features-title { font-weight: 700; text-align: left; margin-top: 20px; margin-bottom: 15px; border-top: 1px solid rgba(255,255,255,0.1); paddingTop: 20px; }
+    .plan-features-title { font-weight: 700; text-align: left; margin-top: 20px; margin-bottom: 15px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
     .plan-features { list-style: none; padding: 0; margin-bottom: 30px; text-align: left; flex-grow: 1; }
     .plan-features li { margin-bottom: 15px; display: flex; align-items: flex-start; }
     .plan-features i { color: var(--cta1); margin-right: 12px; font-size: 1.1rem; margin-top: 4px; }
@@ -252,14 +275,20 @@
     .mosaic-item-4 { grid-column: 1 / 3; grid-row: 3 / 5; }
     .mosaic-item-5 { grid-column: 5 / 7; grid-row: 3 / 5; }
 
-
-    /* --- ESTILOS PARA SECCIÓN DE TESTIMONIOS --- */
+    /* --- ESTILOS PARA SECCIÓN DE TESTIMONIOS (2 COLUMNAS CENTRADAS) --- */
     .testimonial-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 25px;
-        max-width: 1200px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
+        max-width: 900px;
         margin: 0 auto;
+        padding: 0 20px;
+    }
+    @media (max-width: 768px) {
+        .testimonial-grid {
+            grid-template-columns: 1fr;
+            max-width: 500px;
+        }
     }
     .testimonial-card {
         background: var(--card);
@@ -267,6 +296,7 @@
         padding: 30px;
         display: flex;
         flex-direction: column;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.25);
     }
     .testimonial-header {
         display: flex;
@@ -330,7 +360,11 @@
 <body>
   <canvas id="particle-canvas"></canvas>
 
-  <a href="#" class="logo">Bot <span>&</span> Landing</a>
+  <a href="#" class="logo">
+    <img src="https://i.postimg.cc/59QpJsBB/IMG-0314-removebg-preview.png" alt="Logo Criss Lombeida">
+    <span class="brand">Criss Lombeida</span>
+    <span>Bot & Landing</span>
+  </a>
 
   <div id="contact-fab" class="contact-fab" aria-label="Abrir chat de contacto">
     <i class="fa-solid fa-robot"></i>
@@ -341,8 +375,8 @@
     <div class="blob b1"></div><div class="blob b2"></div>
     <div class="header-content">
         <h1>Potencia tu Negocio con IA y Páginas de Ventas</h1>
-        <span class="sub">Soluciones a medida: Landing Pages, Páginas Web Profesionales y Agentes de IA para llevar tu empresa al siguiente nivel.</span>
-        <a href="#precios" class="btn">Ver planes y precios</a>
+        <span class="sub">Soluciones a medida: Agentes de IA y Páginas de Ventas Directas de alta conversión para llevar tu empresa al siguiente nivel.</span>
+        <a href="#soluciones" class="btn">Descubre nuestras soluciones</a>
     </div>
   </header>
 
@@ -356,7 +390,7 @@
     </div>
   </section>
 
-  <!-- NUEVO: SECCIÓN DE CASOS DE USO -->
+  <!-- SECCIÓN DE CASOS DE USO -->
   <section id="use-cases" class="section">
     <h2 class="section-title reveal">¿Por qué una landing page y no solo WhatsApp?</h2>
     <p class="section-subtitle reveal fade" data-delay="120">
@@ -437,57 +471,40 @@
   </section>
 
   <!-- PRODUCTOS -->
-<section id="soluciones" class="section products">
-  <h2 class="section-title reveal">Nuestras Soluciones</h2>
-  <p class="section-subtitle reveal fade" data-delay="120">
-    Ofrecemos soluciones personalizadas que se adaptan a las necesidades específicas de tu negocio.
-  </p>
-  <div class="cards">
-    <!-- Card 1 -->
-    <article class="card reveal left" data-delay="0">
-      <img 
-        src="https://i.postimg.cc/PNZYY3FM/IMG-0136.jpg" 
-        alt="Páginas de Ventas a Medida"
-        onerror="this.onerror=null;this.src='https://placehold.co/800x500/1e1e2f/ffffff?text=Páginas+de+Ventas';"
-      >
-      <div class="content">
-        <span class="tag">Ventas Directas</span>
-        <h3>Páginas de Ventas a Medida</h3>
-        <p>Diseños únicos y optimizados para convertir visitantes en clientes.</p>
-      </div>
-    </article>
+  <section id="soluciones" class="section products">
+    <h2 class="section-title reveal">Nuestras Soluciones</h2>
+    <p class="section-subtitle reveal fade" data-delay="120">
+      Ofrecemos soluciones personalizadas que se adaptan a las necesidades específicas de tu negocio.
+    </p>
+    <div class="cards">
+      <article class="card reveal left" data-delay="0">
+        <img src="https://i.postimg.cc/PNZYY3FM/IMG-0136.jpg" alt="Páginas de Ventas a Medida" onerror="this.onerror=null;this.src='https://picsum.photos/seed/landingpage/800/500';">
+        <div class="content">
+          <span class="tag">Ventas Directas</span>
+          <h3>Páginas de Ventas a Medida</h3>
+          <p>Diseños únicos y optimizados para convertir visitantes en clientes.</p>
+        </div>
+      </article>
+      <article class="card reveal zoom" data-delay="100">
+        <img src="https://i.postimg.cc/t7PWWSmk/IMG-0137.jpg" alt="Agentes de IA Personalizados" onerror="this.onerror=null;this.src='https://picsum.photos/seed/chatbot/800/500';">
+        <div class="content">
+          <span class="tag">Inteligencia Artificial</span>
+          <h3>Agentes de IA Personalizados</h3>
+          <p>Automatiza atención al cliente, ventas y soporte con bots inteligentes.</p>
+        </div>
+      </article>
+      <article class="card reveal right" data-delay="200">
+        <img src="https://i.postimg.cc/9zTZZ8Np/IMG-0138.jpg" alt="Paquete Bot &amp; Ventas" onerror="this.onerror=null;this.src='https://picsum.photos/seed/integral/800/500';">
+        <div class="content">
+          <span class="tag">Solución Completa</span>
+          <h3>Paquete Bot &amp; Ventas</h3>
+          <p>La combinación perfecta: una página de ventas con un agente de IA integrado.</p>
+        </div>
+      </article>
+    </div>
+  </section>
 
-    <!-- Card 2 -->
-    <article class="card reveal zoom" data-delay="100">
-      <img 
-        src="https://i.postimg.cc/t7PWWSmk/IMG-0137.jpg" 
-        alt="Agentes de IA Personalizados"
-        onerror="this.onerror=null;this.src='https://placehold.co/800x500/1e1e2f/ffffff?text=Agentes+de+IA';"
-      >
-      <div class="content">
-        <span class="tag">Inteligencia Artificial</span>
-        <h3>Agentes de IA Personalizados</h3>
-        <p>Automatiza atención al cliente, ventas y soporte con bots inteligentes.</p>
-      </div>
-    </article>
-
-    <!-- Card 3 -->
-    <article class="card reveal right" data-delay="200">
-      <img 
-        src="https://i.postimg.cc/9zTZZ8Np/IMG-0138.jpg" 
-        alt="Paquete Bot &amp; Ventas"
-        onerror="this.onerror=null;this.src='https://placehold.co/800x500/1e1e2f/ffffff?text=Solución+Integral';"
-      >
-      <div class="content">
-        <span class="tag">Solución Completa</span>
-        <h3>Paquete Bot &amp; Ventas</h3>
-        <p>La combinación perfecta: una página de ventas con un agente de IA integrado.</p>
-      </div>
-    </article>
-  </div>
-</section>
-
-  <!-- SECCIÓN DE PORTAFOLIO ESTÁTICO -->
+  <!-- PORTAFOLIO -->
   <section id="portfolio" class="section">
     <h2 class="section-title reveal">Explora Nuestro Portafolio de Éxito</h2>
     <p class="section-subtitle reveal fade" data-delay="120">
@@ -502,90 +519,111 @@
     </div>
   </section>
 
-  <!-- SECCIÓN DE PLANES DE PRECIOS 3D ACTUALIZADA -->
+  <!-- PRECIOS -->
   <section id="precios" class="section">
-    <h2 class="section-title reveal">Planes de Landing Page y Páginas Web</h2>
+    <h2 class="section-title reveal">Planes Flexibles para tu Crecimiento</h2>
     <p class="section-subtitle reveal fade" data-delay="120">
-      Todos nuestros planes son de pago único e incluyen dominio propio por 1 año, hosting administrado, integración con Google Maps y botones directos a WhatsApp. 
-      Tú no te preocupas por lo técnico: nosotros manejamos todo.
+      Elige la combinación perfecta que se adapte a tus objetivos. Invierte en resultados.
     </p>
     <div class="pricing-container">
         <div class="pricing-plans">
-            <!-- Plan Landing $99 -->
+            <!-- Plan Básico -->
             <div class="plan reveal" data-delay="100">
-                <h3 class="plan-title">Landing Page Profesional</h3>
-                <p class="plan-subtitle">Ideal para un solo servicio o producto</p>
+                <h3 class="plan-title">Plan Básico</h3>
+                <p class="plan-subtitle">(1 Etapa - Solo diseño)</p>
                 <p class="plan-price">USD$ 99</p>
-                <p class="plan-description">Pago único · 1 sección</p>
-                <h4 class="plan-features-title">Incluye:</h4>
+                <p class="plan-description">Pago único</p>
+                <h4 class="plan-features-title">Características clave:</h4>
                 <ul class="plan-features">
-                    <li><i class="fa-solid fa-check"></i>Landing de una sola sección, enfocada 100% en vender o generar contactos.</li>
-                    <li><i class="fa-solid fa-check"></i>Dominio propio + hosting por 1 año, ya configurados.</li>
-                    <li><i class="fa-solid fa-check"></i>Google Maps integrado con la ubicación de tu negocio.</li>
-                    <li><i class="fa-solid fa-check"></i>Botones directos a WhatsApp, redes sociales y/o links de pago.</li>
-                    <li><i class="fa-solid fa-check"></i>Sección de propuesta de valor, beneficios y llamado a la acción claro.</li>
-                    <li><i class="fa-solid fa-check"></i>Cotizador básico (si tu rubro lo permite).</li>
-                    <li><i class="fa-solid fa-check"></i>Diseño responsive (celular, tablet y computador).</li>
-                    <li><i class="fa-solid fa-check"></i>Optimización SEO básica para aparecer mejor en Google.</li>
+                    <li><i class="fa-solid fa-check"></i>Encabezado impactante con propuesta de valor</li>
+                    <li><i class="fa-solid fa-check"></i>Lista de beneficios o características</li>
+                    <li><i class="fa-solid fa-check"></i>Testimonios o garantías para generar confianza</li>
+                    <li><i class="fa-solid fa-check"></i>Botón de compra destacado</li>
+                    <li><i class="fa-solid fa-check"></i>Diseño optimizado para móviles y velocidad de carga</li>
                 </ul>
                 <div class="plan-buttons">
-                    <a href="#contacto" class="btn secondary">Quiero más info <i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="#contacto" class="btn pay">Reservar mi Landing</a>
+                    <a href="#contacto" class="btn secondary">Consultar por WhatsApp <i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#contacto" class="btn pay">Pagar en línea USD</a>
                 </div>
             </div>
-
-            <!-- Plan Web Corporativa $300 (Popular) -->
+            <!-- Plan Estratégico -->
             <div class="plan popular reveal" data-delay="200">
-                <div class="plan-popular-badge">Más elegida</div>
-                <h3 class="plan-title">Web Corporativa (5 secciones)</h3>
-                <p class="plan-subtitle">Perfecta para empresas que quieren presencia sólida</p>
-                <p class="plan-price">USD$ 300</p>
-                <p class="plan-description">Pago único · Hasta 5 secciones</p>
-                <h4 class="plan-features-title">Incluye:</h4>
+                <div class="plan-popular-badge">Popular</div>
+                <h3 class="plan-title">Plan Estratégico</h3>
+                <p class="plan-subtitle">(2 Etapas + estrategia)</p>
+                <p class="plan-price">USD$ 299</p>
+                <p class="plan-description">Pago único</p>
+                <h4 class="plan-features-title">Características clave:</h4>
                 <ul class="plan-features">
-                    <li><i class="fa-solid fa-check"></i>Hasta 5 secciones (ej: Inicio, Nosotros, Servicios, Portafolio, Contacto).</li>
-                    <li><i class="fa-solid fa-check"></i>Dominio propio + hosting por 1 año, administrados por nosotros.</li>
-                    <li><i class="fa-solid fa-check"></i>Google Maps interactivo con tu ubicación y datos de contacto.</li>
-                    <li><i class="fa-solid fa-check"></i>Formulario de contacto profesional + botón a WhatsApp.</li>
-                    <li><i class="fa-solid fa-check"></i>Cotizador básico para consultas de precios o servicios.</li>
-                    <li><i class="fa-solid fa-check"></i>Integración con Google Analytics / GA4 para ver visitas.</li>
-                    <li><i class="fa-solid fa-check"></i>SEO básico en todas las secciones principales.</li>
-                    <li><i class="fa-solid fa-check"></i>Diseño corporativo alineado a tus colores y estilo de marca.</li>
+                    <li><i class="fa-solid fa-check"></i>Todo lo de la versión básica</li>
+                    <li><i class="fa-solid fa-check"></i>Conexión a tu plataforma de marketing</li>
+                    <li><i class="fa-solid fa-check"></i>Redirección tras el formulario</li>
+                    <li><i class="fa-solid fa-check"></i>Confirmación por correo</li>
+                    <li><i class="fa-solid fa-check"></i>Vinculación con Google Tag Manager, Pixel y GA4</li>
                 </ul>
                 <div class="plan-buttons">
-                    <a href="#contacto" class="btn secondary">Solicitar propuesta <i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="#contacto" class="btn pay">Quiero esta Web</a>
+                    <a href="#contacto" class="btn secondary">Consultar por WhatsApp <i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#contacto" class="btn pay">Pagar en línea</a>
                 </div>
-                <p class="plan-discount">*Ideal para empresas que quieren verse serias, ordenadas y confiables.</p>
+                <p class="plan-discount">*15% de descuento para pagos en línea</p>
             </div>
+            <!-- Plan Funnel Completo -->
+            <div class="plan reveal" data-delay="300">
+                <h3 class="plan-title">Plan Funnel Completo</h3>
+                <p class="plan-subtitle">(Múltiples etapas)</p>
+                <p class="plan-price">USD$ 799</p>
+                <p class="plan-description">Pago único</p>
+                <h4 class="plan-features-title">Características clave:</h4>
+                <ul class="plan-features">
+                    <li><i class="fa-solid fa-check"></i>Funnel de ventas completo para guiar al cliente</li>
+                    <li><i class="fa-solid fa-check"></i>Múltiples páginas del funnel (landing, upsell, etc.)</li>
+                    <li><i class="fa-solid fa-check"></i>Automatización básica del flujo</li>
+                    <li><i class="fa-solid fa-check"></i>Configuración de calendario o pagos</li>
+                    <li><i class="fa-solid fa-check"></i>Vinculación con Google Tag Manager, Pixel y GA4</li>
+                    <li><i class="fa-solid fa-check"></i>Pruebas A/B</li>
+                </ul>
+                <div class="plan-buttons">
+                    <a href="#contacto" class="btn secondary">Consultar por WhatsApp <i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#contacto" class="btn pay">Pagar en línea</a>
+                </div>
+                <p class="plan-discount">*15% de descuento para pagos en línea</p>
+            </div>
+        </div>
+    </div>
+  </section>
 
- /* NUEVA VERSIÓN CENTRADA Y SOLO 2 TESTIMONIOS */
-.testimonial-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* SOLO 2 TESTIMONIOS */
-    gap: 35px;
-    max-width: 900px;       /* CENTRADO PERFECTO */
-    margin: 0 auto;         /* CENTRADO */
-    padding: 0 20px;        /* SE VE BONITO EN TABLET */
-}
-
-/* EN CELULAR -> 1 COLUMNA (ELEGANTE Y CLARO) */
-@media (max-width: 768px) {
-    .testimonial-grid {
-        grid-template-columns: 1fr;
-        max-width: 500px;
-    }
-}
-
-/* OPCIONAL: ESTILIZA MEJOR LAS CARDS */
-.testimonial-card {
-    background: var(--card);
-    border-radius: 15px;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-}
+  <!-- TESTIMONIOS (SOLO 2) -->
+  <section id="testimonials" class="section">
+    <h2 class="section-title reveal">Lo que opinan nuestros clientes</h2>
+    <div class="testimonial-grid">
+        <!-- Testimonio 1 -->
+        <div class="testimonial-card reveal" data-delay="100">
+            <div class="testimonial-header">
+                <img src="https://picsum.photos/seed/face1/100" alt="Avatar de Maria Arévalo" class="testimonial-avatar">
+                <h3>«Muchas gracias«</h3>
+            </div>
+            <p>Gracias por responder rápido y brindarme soluciones a todo lo que les pedí. Tienen una gran calidad humana, eso es algo que valoro enormemente.</p>
+            <div class="testimonial-footer">
+                <div class="testimonial-stars">★★★★★</div>
+                <div class="testimonial-author">Maria Arévalo</div>
+                <div class="testimonial-company">Empresa: Confecta</div>
+            </div>
+        </div>
+        <!-- Testimonio 2 -->
+        <div class="testimonial-card reveal" data-delay="200">
+            <div class="testimonial-header">
+                <img src="https://picsum.photos/seed/face2/100" alt="Avatar de Laura Cardenas" class="testimonial-avatar">
+                <h3>¡Recomendado 100%!</h3>
+            </div>
+            <p>¡Estoy encantada con su trabajo! La página web que hicieron para mi negocio quedó muy bonita. Gracias por tomar en cuenta mis ideas y hacerlas funcionar. Son unos profesionales. ¡Recomiendo sus servicios al 100%!</p>
+            <div class="testimonial-footer">
+                <div class="testimonial-stars">★★★★★</div>
+                <div class="testimonial-author">Laura Cardenas</div>
+                <div class="testimonial-company">Empresa: BodasEncanto</div>
+            </div>
+        </div>
+    </div>
+  </section>
 
   <!-- CARRUSEL DE LOGOS DE CLIENTES -->
   <section class="client-logos reveal fade">
@@ -612,12 +650,11 @@
       </div>
   </section>
 
-
   <!-- CTA FINAL -->
   <section id="contacto" class="cta reveal zoom" data-delay="0">
     <h2>Transforma tu Presencia Digital Hoy</h2>
-    <p>Escríbenos y te ayudamos a elegir el plan perfecto para tu negocio.</p>
-    <a href="https://wa.me/593" class="btn">Hablar por WhatsApp</a>
+    <p>Descubre cómo la IA y las páginas de ventas pueden llevar tu negocio al siguiente nivel.</p>
+    <a href="#" class="btn">Solicita una Demo</a>
   </section>
   
   <!-- Chat Popup -->
@@ -629,7 +666,7 @@
           </div>
           <div id="chat-body" class="chat-body">
               <div class="chat-message bot">
-                  <p>¡Hola! 👋 Soy tu asistente de ventas. Pregúntame lo que quieras sobre nuestras landing pages, páginas web y cómo podemos ayudarte a vender más.</p>
+                  <p>¡Hola! 👋 Soy tu asistente de ventas. Pregúntame lo que quieras sobre nuestros servicios y cómo podemos ayudarte a crecer.</p>
               </div>
           </div>
           <div class="chat-footer">
@@ -665,19 +702,18 @@
     const messageInput = document.getElementById('message-input');
     const chatBody = document.getElementById('chat-body');
 
-    // --- Base de Conocimiento del Asistente de Ventas (ACTUALIZADA) ---
     const knowledgeBase = {
-        'ofrecen|que hacen|servicios': 'Creamos Landing Pages y páginas web profesionales con dominio propio y hosting incluido. Nos encargamos de todo: diseño, publicación y la parte técnica, para que tú solo te enfoques en vender.',
-        'mi negocio|sirve para|restaurante|consultorio|tienda': '¡Absolutamente! Nuestras páginas se adaptan a casi cualquier tipo de negocio: restaurantes, tiendas, servicios profesionales, salud, educación, inmobiliarias y más. Analizamos tu modelo y armamos la estructura ideal para ti.',
-        'precio|cuesta|costo|valor|planes': 'Manejamos tres planes de pago único: Landing Page Profesional desde USD $99, Web Corporativa (hasta 5 secciones) por USD $300 y Web Premium Empresarial (hasta 10 secciones) por USD $600. Todos incluyen dominio por 1 año, hosting, Google Maps y botones a WhatsApp. Si luego quieres mantenimiento mensual para cambios, también lo podemos agregar como servicio adicional.',
-        'resultados|cuando veo': 'Las páginas se entregan optimizadas para que empieces a recibir consultas y contactos desde el primer día. El impacto depende de cuánto las muevas en redes, anuncios o recomendaciones, pero la estructura ya queda lista para convertir mejor.',
-        'agente ia|que es un bot|inteligencia artificial': 'Nuestro agente de IA es como un asistente de ventas que trabaja 24/7. Responde preguntas frecuentes, califica clientes, agenda citas y puede guiar al usuario hasta el contacto final. Se puede integrar con tu página para automatizar parte de la atención.',
-        'tengo web|necesito pagina de ventas': 'Una página web informa, pero una landing page está enfocada en una sola acción: vender, agendar o captar datos. Muchos clientes combinan ambas: una web corporativa y una landing específica para campañas.',
-        'visitas|seo|google': 'Aplicamos buenas prácticas de SEO on-page: títulos, descripciones, estructura y velocidad. Esto facilita que Google entienda mejor de qué trata tu página y ayuda a posicionarte mejor con el tiempo.',
-        'tecnico|conocimientos': 'No necesitas conocimientos técnicos. Nosotros nos encargamos de diseño, configuración, dominio, hosting y conexiones básicas. Te entregamos todo funcionando.',
-        'soporte|ayuda|mantenimiento': 'Incluimos soporte inicial tras la entrega para que todo quede perfecto. Si deseas, puedes contratar un plan de mantenimiento mensual para cambios de fotos, textos, nuevas secciones o ajustes continuos.',
-        'como empezamos|iniciar|contacto': 'El primer paso es que nos cuentes qué haces y qué plan te interesa. Puedes escribirnos por WhatsApp desde el botón de contacto o dejar aquí tu número y horario, y te contactamos.',
-        'default': 'Entendido. ¿Te gustaría que te recomiende uno de los planes (Landing $99, Web Corporativa $300 o Web Premium $600) según tu tipo de negocio?'
+        'ofrecen|que hacen|servicios': 'Creamos soluciones digitales completas: Páginas de Ventas de alta conversión y Agentes de IA personalizados. En resumen, construimos las herramientas que tu negocio necesita para atraer más clientes y vender más, de forma automática.',
+        'mi negocio|sirve para|restaurante|consultorio|tienda': '¡Absolutamente! Nuestra fortaleza es la adaptabilidad. Hemos trabajado con todo tipo de negocios, desde tiendas online y restaurantes hasta consultores y servicios profesionales. Analizamos tu modelo de negocio y creamos una solución a medida para tus necesidades específicas.',
+        'precio|cuesta|costo|valor': '¡Claro! Nuestra Página de Ventas es un pago único de $300. Para el Agente de IA, tenemos dos planes mensuales: Pro por $100 y Premium por $200. El Premium es el más popular porque ofrece análisis y personalización avanzada. ¿Cuál te interesa más?',
+        'resultados|cuando veo': 'Nuestras páginas están optimizadas para la conversión desde el primer día. Muchos de nuestros clientes ven un aumento en consultas y ventas en las primeras semanas. Tu agente de IA empieza a calificar clientes y a responder dudas 24/7 desde el momento uno.',
+        'agente ia|que es un bot|inteligencia artificial': 'Imagina un vendedor o un asistente de soporte que trabaja 24/7, sin descanso. Nuestro agente de IA es un chatbot inteligente que puede responder preguntas, calificar clientes potenciales, agendar citas e incluso cerrar ventas básicas, todo de forma automática en tu página.',
+        'tengo web|necesito pagina de ventas': 'Una página web es como un folleto digital, tiene mucha información. Una página de ventas es como tu mejor vendedor: está 100% enfocada en una sola acción, como vender un producto o conseguir un cliente. Es una herramienta de precisión diseñada para maximizar la conversión.',
+        'visitas|seo|google': 'Nuestras páginas están construidas con las mejores prácticas de SEO (optimización para motores de búsqueda). Esto ayuda a que Google te encuentre más fácilmente. Además, una página rápida y atractiva mejora la experiencia del usuario, lo que también favorece tu posicionamiento y atrae más visitas.',
+        'tecnico|conocimientos': 'Para nada. Nosotros nos encargamos de toda la parte técnica, desde el diseño y desarrollo hasta la implementación. Te entregamos una solución llave en mano, lista para empezar a generar resultados para tu negocio.',
+        'soporte|ayuda|mantenimiento': '¡Claro que sí! Ofrecemos un período de soporte post-lanzamiento para asegurar que todo funcione a la perfección. También tenemos planes de mantenimiento y optimización continua si te interesa seguir mejorando tus resultados a largo plazo.',
+        'como empezamos|iniciar|contacto': '¡Es muy fácil! El primer paso es tener una breve charla para entender tus objetivos. Puedes solicitar una demo en el botón de abajo o dejarme tu correo aquí mismo y un especialista se podrá en contacto contigo a la brevedad.',
+        'default': 'Entendido. ¿Hay algo más en lo que pueda ayudarte? Puedo darte información sobre nuestros servicios, precios o cómo podemos adaptarnos a tu negocio para aumentar tus ventas.'
     };
 
     contactFab.addEventListener('click', () => chatPopup.classList.toggle('show'));
@@ -698,7 +734,7 @@
         messageElement.className = `chat-message ${sender}`;
         messageElement.innerHTML = `<p>${message}</p>`;
         chatBody.appendChild(messageElement);
-        chatBody.scrollTop = chatBody.scrollHeight; // Auto-scroll
+        chatBody.scrollTop = chatBody.scrollHeight;
     }
 
     function getBotResponse(userMessage) {
@@ -722,9 +758,8 @@
             
             chatBody.removeChild(typingIndicator);
             addMessageToChat('bot', botMessage);
-        }, 1500); // Simula tiempo de respuesta
+        }, 1500);
     }
-
 
     // --- SCRIPT DE ANIMACIÓN DE PARTÍCULAS ---
     const canvas = document.getElementById('particle-canvas');
